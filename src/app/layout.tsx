@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 const title = 'Green Huang | Full Stack Developer From Melbourne Australia.';
 const description =
   'A self-proclaimed programmer who specializes in full stack develop and deployment.';
-const url = 'https://greenhuang47.online/';
+const url = 'https://greenhuang.com/';
 
 export const metadata: Metadata = {
   metadataBase: new URL(url),
@@ -49,9 +49,9 @@ export const metadata: Metadata = {
     images: '/images/open-graph-sagar.png',
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: '/icon.png',
+    shortcut: 'https://download.greenhuang.com/favicon.ico',
+    apple: 'https://download.greenhuang.com/favicon.ico',
   },
 };
 
@@ -65,21 +65,24 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth" suppressHydrationWarning>
       {googleAnalyticsId ? (
-        <head>
-          <Script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
-          ></Script>
-          <Script id="google-anayltics-script">
-            {`
+          <head>
+
+            <Script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+            ></Script>
+            <Script id="google-anayltics-script">
+              {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
           
             gtag('config', '${googleAnalyticsId}');
           `}
-          </Script>
-        </head>
+            </Script>
+            <title></title>
+            <link rel="icon" href="https://download.greenhuang.com/favicon.ico" sizes="any"/>
+          </head>
       ) : null}
       <body className={`${inter.className} bg-gray text-gray-600 antialiased`}>
         <Providers>
