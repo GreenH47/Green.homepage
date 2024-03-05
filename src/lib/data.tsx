@@ -42,12 +42,12 @@ import {
 } from '@/lib/types';
 
 export const EXTERNAL_LINKS = {
-  GITHUB: 'https://github.com/shahsagarm',
-  GITHUB_REPO: 'https://github.com/shahsagarm/sagarshah.dev',
-  TWITTER: 'https://twitter.com/shahsagarm',
-  FIGMA: 'https://www.figma.com/@shahsagarm',
+  GITHUB: 'https://github.com/GreenH47',
+  GITHUB_REPO: 'https://github.com/GreenH47/Green.homepage',
+  TWITTER: 'https://twitter.com/backup1722127',
+  FIGMA: 'https://www.figma.com',
   FIGMA_FILE:
-    'https://www.figma.com/community/file/1262992249991763120/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop',
+    'https://www.figma.com/file/tvVJgZsqa7u0nwJ7vIDxfI/Personal-Portfolio-Website-Template-%7C-Mobile-%26-Desktop-(Community)-(Copy)?type=design&node-id=327%3A868&mode=design&t=9pxJ4m4V1Dd9a7is-1',
 };
 
 export const NAV_LINKS = [
@@ -72,15 +72,15 @@ export const NAV_LINKS = [
 export const SOCIAL_LINKS = [
   {
     icon: Github,
-    url: 'https://github.com/shahsagarm',
+    url: 'https://github.com/GreenH47',
   },
   {
     icon: Twitter,
-    url: 'https://twitter.com/shahsagarm',
+    url: 'https://twitter.com/backup1722127',
   },
   {
     icon: Figma,
-    url: 'https://www.figma.com/@shahsagarm',
+    url: 'https://www.figma.com',
   },
 ];
 

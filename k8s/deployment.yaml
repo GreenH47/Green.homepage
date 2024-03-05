@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: home-page
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: home-page
+  template:
+    metadata:
+      labels:
+        app: home-page
+    spec:
+      containers:
+        - name: home-page
+          image: greenh47/homepage:nextjs
+          command: ["npm", "run", "dev"]
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              cpu: "1"
+              memory: "2000Mi"
