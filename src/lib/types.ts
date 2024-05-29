@@ -29,6 +29,7 @@ export type ProjectDetails = {
 export type TestimonialDetails = {
   personName: string;
   personAvatar?: string | StaticImageData;
+  link: string;
   testimonial: string;
   title: string;
 };

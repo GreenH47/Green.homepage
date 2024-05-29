@@ -5,19 +5,10 @@ import LogoTypescript from '/public/images/logos/icon-typescript.svg';
 import LogoReact from '/public/images/logos/icon-react.svg';
 import LogoNextjs from '/public/images/logos/icon-nextjs.svg';
 import LogoNodejs from '/public/images/logos/icon-nodejs.svg';
-import LogoExpress from '/public/images/logos/icon-express.svg';
-import LogoExpressLight from '/public/images/logos/icon-express-light.svg';
-import LogoNest from '/public/images/logos/icon-nest.svg';
-import LogoSocket from '/public/images/logos/icon-socket.svg';
-import LogoSocketLight from '/public/images/logos/icon-socket-light.svg';
 import LogoPostgreSQL from '/public/images/logos/icon-postgresql.svg';
 import LogoMongoDB from '/public/images/logos/icon-mongodb.svg';
-import LogoSass from '/public/images/logos/icon-sass.svg';
 import LogoTailwindcss from '/public/images/logos/icon-tailwindcss.svg';
 import LogoFigma from '/public/images/logos/icon-figma.svg';
-import LogoCypress from '/public/images/logos/icon-cypress.svg';
-import LogoCypressLight from '/public/images/logos/icon-cypress-light.svg';
-import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
 
 import LogoUpwork from '/public/images/logos/logo-upwork.svg';
@@ -33,6 +24,8 @@ import ProjectPepehousing from '/public/images/project-pepehousing.png';
 import AvatarKrisztian from '/public/images/avatar-krisztian.png';
 import AvatarEugen from '/public/images/avatar-eugen.png';
 import AvatarDummy from '/public/images/avatar-dummy.svg';
+
+import Avator_Jingsheng_Chang from '/public/images/avator/jingsheng-chang.jpg';
 
 import {
   ExperienceDetails,
@@ -60,7 +53,11 @@ export const NAV_LINKS = [
     href: '#work',
   },
   {
-    label: 'Testimonials',
+    label: 'Skills',
+    href: '#Skills',
+  },
+  {
+    label: 'References',
     href: '#testimonials',
   },
   {
@@ -110,23 +107,7 @@ export const TECHNOLOGIES: TechDetails[] = [
     logo: LogoNodejs,
     url: 'https://nodejs.org/en',
   },
-  {
-    label: 'Express.js',
-    logo: LogoExpress,
-    darkModeLogo: LogoExpressLight,
-    url: 'https://expressjs.com/',
-  },
-  {
-    label: 'Nest.js',
-    logo: LogoNest,
-    url: 'https://nestjs.com/',
-  },
-  {
-    label: 'Socket.io',
-    logo: LogoSocket,
-    darkModeLogo: LogoSocketLight,
-    url: 'https://socket.io/',
-  },
+
   {
     label: 'PostgreSQL',
     logo: LogoPostgreSQL,
@@ -137,11 +118,7 @@ export const TECHNOLOGIES: TechDetails[] = [
     logo: LogoMongoDB,
     url: 'https://www.mongodb.com/',
   },
-  {
-    label: 'Sass/Scss',
-    logo: LogoSass,
-    url: 'https://sass-lang.com/',
-  },
+
   {
     label: 'Tailwindcss',
     logo: LogoTailwindcss,
@@ -152,21 +129,11 @@ export const TECHNOLOGIES: TechDetails[] = [
     logo: LogoFigma,
     url: 'https://www.figma.com/',
   },
-  {
-    label: 'Cypress',
-    logo: LogoCypress,
-    darkModeLogo: LogoCypressLight,
-    url: 'https://www.cypress.io/',
-  },
-  {
-    label: 'Storybook',
-    logo: LogoStorybook,
-    url: 'https://storybook.js.org/',
-  },
+
   {
     label: 'Git',
     logo: LogoGit,
-    url: 'https://git-scm.com/',
+    url: 'https://github.com/GreenH47',
   },
 ];
 
@@ -268,15 +235,17 @@ export const PROJECTS: ProjectDetails[] = [
 
 export const TESTIMONIALS: TestimonialDetails[] = [
   {
-    personName: 'Krisztian Gyuris',
-    personAvatar: AvatarKrisztian,
-    title: 'Founder - inboxgenie.io',
+    personName: 'jingsheng-chang',
+    personAvatar: Avator_Jingsheng_Chang,
+    link: 'https://www.linkedin.com/in/jingsheng-chang-2216381b4/',
+    title: 'CoFounder - cpu-education',
     testimonial:
-      'Job well done! I am really impressed. He is very very good at what he does:) I would recommend Sagar and will rehire in the future for Frontend development.',
+      'Job well done! I am really impressed. He is very very good at what he does:) I would recommend Green and will rehire in the future for Frontend development.',
   },
   {
     personName: 'Eugen Esanu',
     personAvatar: AvatarEugen,
+    link: 'https://www.linkedin.com/in/jingsheng-chang-2216381b4/',
     title: 'Founder - shosho.design',
     testimonial:
       'Great guy, highly recommended for any COMPLEX front-end development job! His skills are top-notch and he will be an amazing addition to any team.',
@@ -284,6 +253,7 @@ export const TESTIMONIALS: TestimonialDetails[] = [
   {
     personName: 'Joe Matkin',
     personAvatar: AvatarDummy,
+    link: 'https://www.linkedin.com/in/jingsheng-chang-2216381b4/',
     title: 'Freelancer',
     testimonial:
       'Sagar was extremely easy and pleasant to work with and he truly cares about the project being a success. Sagar has a high level of knowledge and was able to work on my MERN stack application without any issues.',

@@ -40,58 +40,33 @@ const AboutMeSection = () => {
                             noCustomization
                             externalLink
                             withUnderline
-                            href={EXTERNAL_LINKS.FIGMA}
+                            href={EXTERNAL_LINKS.GITHUB}
                         >
-                            self-proclaimed designer
+                            self-proclaimed programmer
                         </Link>{' '}
-                        who specializes in full stack development (React.js & Node.js). I am
+                        who specializes in full stack development (React.js & Csharp). I am
                         enthusiastic about bringing the technical and visual aspects of
                         digital products to life. User experience, pixel perfect design, and
                         writing clear, readable, highly performant code matters to me.
                     </Typography>
                     <Typography>
-                        I began my journey as a web developer in 2015, and since then,
+                        I began my journey as a web developer in 2021, and since then,
                         I&apos;ve continued to grow and evolve as a developer, taking on new
                         challenges and learning the latest technologies along the way. Now,
-                        in my early thirties, 7 years after starting my web development
+                        in my early thirties, 3 years after starting my web development
                         journey, I&apos;m building cutting-edge web applications using
-                        modern technologies such as Next.js, TypeScript, Nestjs,
-                        Tailwindcss, Supabase and much more.
+                        modern technologies such as Next.js, TypeScript, Nestjs,and much more.
                     </Typography>
                     <Typography>
                         I am very much a progressive thinker and enjoy working on products
                         end to end, from ideation all the way to development.
                     </Typography>
-                    <Typography>
-                        When I&apos;m not in full-on developer mode, you can find me
-                        hovering around on twitter or on indie hacker, witnessing the
-                        journey of early startups or enjoying some free time. You can follow
-                        me on{' '}
-                        <Link
-                            noCustomization
-                            externalLink
-                            withUnderline
-                            href={EXTERNAL_LINKS.TWITTER}
-                        >
-                            Twitter
-                        </Link>{' '}
-                        where I share tech-related bites and build in public, or you can
-                        follow me on{' '}
-                        <Link
-                            noCustomization
-                            externalLink
-                            withUnderline
-                            href={EXTERNAL_LINKS.GITHUB}
-                        >
-                            GitHub
-                        </Link>
-                        .
-                    </Typography>
+
                     <Typography>Finally, some quick bits about me.</Typography>
                     <div className="flex flex-col gap-2 md:flex-row md:gap-6">
                         <ul className="flex list-inside list-disc flex-col gap-2">
                             <Typography component="li">
-                                B.E. in Computer Engineering
+                                Master of Information Technology
                             </Typography>
                             <Typography component="li">Full time freelancer</Typography>
                         </ul>

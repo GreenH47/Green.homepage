@@ -1,0 +1,44 @@
+
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code repo
+        uses: actions/checkout@v2
+
+
+      - name: Login to Docker Hub
+        env:
+          DOCKERHUB_USERNAME: greenh47
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD }}
+        run: echo "$DOCKERHUB_PASSWORD" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+
+      - name: Build and Push Docker Image
+        run: |
+          docker build --platform linux/arm64 -t greenh47/homepage:nextjs .
+          docker push greenh47/homepage:nextjs
+
+      - name: Update docker image
+        id: update-ec2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_IP }}
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # stop docker compose
+            sudo docker compose stop home_page
+            
+            # pull the latest image
+            sudo docker pull greenh47/homepage:nextjs
+            
+            # start the docker compose
+            sudo docker compose up -d home_page

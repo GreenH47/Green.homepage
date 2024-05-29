@@ -31,11 +31,9 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              I&apos;m a full stack developer (React.js & Node.js) with a focus
-              on creating (and occasionally designing) exceptional digital
-              experiences that are fast, accessible, visually appealing, and
-              responsive. Even though I have been creating web applications for
-              over 7 years, I still love it as if it was something new.
+              As a motivated and resourceful individual with a Master's degree in IT from Monash University, I am eager to kickstart my career in the
+              field of software development, web development, or cloud engineering. Equipped with AWS Solutions Architect Associate certification,
+              I possess a strong foundation in cloud computing. Proficient in C#, Java, Python, SQL, and Android
             </Typography>
           </div>
           <div className="flex flex-col gap-2">
