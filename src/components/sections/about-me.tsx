@@ -62,23 +62,23 @@ const AboutMeSection = () => {
                         end to end, from ideation all the way to development.
                     </Typography>
 
-                    <Typography>Finally, some quick bits about me.</Typography>
-                    <div className="flex flex-col gap-2 md:flex-row md:gap-6">
-                        <ul className="flex list-inside list-disc flex-col gap-2">
-                            <Typography component="li">
-                                Master of Information Technology
-                            </Typography>
-                            <Typography component="li">Full time freelancer</Typography>
-                        </ul>
-                        <ul className="flex list-inside list-disc flex-col gap-2">
-                            <Typography component="li">Avid learner</Typography>
-                            <Typography component="li">Aspiring indie hacker</Typography>
-                        </ul>
-                    </div>
-                    <Typography>
-                        One last thing, I&apos;m available for freelance work, so feel free
-                        to reach out and say hello! I promise I don&apos;t bite 😉
-                    </Typography>
+                    {/*<Typography>Finally, some quick bits about me.</Typography>*/}
+                    {/*<div className="flex flex-col gap-2 md:flex-row md:gap-6">*/}
+                    {/*    <ul className="flex list-inside list-disc flex-col gap-2">*/}
+                    {/*        <Typography component="li">*/}
+                    {/*            Master of Information Technology*/}
+                    {/*        </Typography>*/}
+                    {/*        <Typography component="li">Full time freelancer</Typography>*/}
+                    {/*    </ul>*/}
+                    {/*    <ul className="flex list-inside list-disc flex-col gap-2">*/}
+                    {/*        <Typography component="li">Avid learner</Typography>*/}
+                    {/*        <Typography component="li">Aspiring indie hacker</Typography>*/}
+                    {/*    </ul>*/}
+                    {/*</div>*/}
+                    {/*<Typography>*/}
+                    {/*    One last thing, I&apos;m available for freelance work, so feel free*/}
+                    {/*    to reach out and say hello! I promise I don&apos;t bite 😉*/}
+                    {/*</Typography>*/}
                 </div>
             </div>
         </Container>

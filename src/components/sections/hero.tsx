@@ -31,9 +31,12 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              As a motivated and resourceful individual with a Master's degree in IT from Monash University, I am eager to kickstart my career in the
-              field of software development, web development, or cloud engineering. Equipped with AWS Solutions Architect Associate certification,
-              I possess a strong foundation in cloud computing. Proficient in C#, Java, Python, SQL, and Android
+              Motivated Cloud and Web Engineer with a Master’s degree in Information Technology from Monash University
+              and an AWS Solutions Architect Associate certification. I offer strong programming skills in C#, Java, Python,
+              and SQL combined with hands-on experience in cloud computing and web development. During my internship at RANS Australia,
+              I enhanced website UI/UX, optimized SEO, and ensured responsive designs using tools like Canva, Shopify, and WooCommerce.
+              I excel in troubleshooting and streamlining digital experiences and am eager to contribute my diverse skill
+              set in a collaborative technical role.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">

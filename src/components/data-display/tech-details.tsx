@@ -11,7 +11,7 @@ const TechDetails = ({ url, logo, darkModeLogo, label }: TechDetails) => {
       <Link noCustomization href={url} externalLink>
         <ImageWrapper
           src={logo}
-          srcForDarkMode={darkModeLogo}
+          srcForDarkMode={logo}
           alt={label}
           className="transition-transform duration-300 md:hover:scale-110"
         />
