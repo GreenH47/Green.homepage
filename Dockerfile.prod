@@ -1,33 +1,31 @@
-# syntax=docker/dockerfile:1.4   # enables BuildKit ‘ARG --platform’ features
+# syntax=docker/dockerfile:1.4
 
-########## 1️⃣  Build stage ##########
-
-FROM --platform=linux/arm64 node:20-alpine AS builder
+################  deps stage (cached)  ################
+FROM --platform=linux/arm64 node:20-alpine AS deps
 WORKDIR /app
 
-
+# Copy only manifests → layer is rebuilt **only** when these change
 COPY package*.json ./
-COPY tailwind.config.js ./
-COPY postcss.config.js ./
-# reproducible install without devDeps&#8203;:contentReference[oaicite:5]{index=5}
-RUN npm ci
+RUN npm ci --omit=dev
+
+################  build stage (quick)  ################
+FROM deps AS build
+WORKDIR /app
+
+COPY tailwind.config.js postcss.config.js ./
 COPY . .
-# creates .next/ bundle
 RUN npm run build
 
-########## 2️⃣  Runtime stage ##########
-
-FROM --platform=linux/arm64 node:20-alpine AS runner
+################  runtime stage (tiny)  ################
+FROM --platform=linux/arm64 node:20-alpine AS runtime
 WORKDIR /app
 ENV NODE_ENV=production
-# silence analytics
 ENV NEXT_TELEMETRY_DISABLED=1
 
-COPY --from=builder /app/.next      ./.next
-COPY --from=builder /app/public     ./public
-COPY --from=builder /app/package.json ./package.json
-COPY --from=builder /app/node_modules ./node_modules
-# 👉 If you enable `output: "standalone"` in next.config.js you can skip node_modules for an even slimmer image.&#8203;:contentReference[oaicite:6]{index=6}
+COPY --from=build /app/.next            ./.next
+COPY --from=build /app/public           ./public
+COPY --from=deps  /app/node_modules     ./node_modules
+COPY --from=build /app/package.json     ./package.json
 
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+CMD ["npm","run","start"]

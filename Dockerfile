@@ -4,23 +4,18 @@ FROM greenh47/homepage:nextjs_base
 # Set the working directory
 WORKDIR /app
 
-#NODE_ENV=production
 
-## Copy just the package.json and package-lock.json files
-#COPY package*.json ./
-#
-## Install dependencies (including production dependencies only)
-#RUN npm install
 
 # Copy the rest of the application code
 COPY . .
 
 ENV NODE_ENV=production
 
+#RUN npm build
+
 # Expose the port
 EXPOSE 3000
-# build the application
-#RUN npm run build
+
 
 # Start the application
-CMD ["npm", "run", "start"]
+CMD ["sh","-c","next build && npm run start"]
