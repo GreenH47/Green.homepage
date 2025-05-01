@@ -4,13 +4,13 @@
 
 FROM --platform=linux/arm64 node:20-alpine AS builder
 WORKDIR /app
-ENV NODE_ENV=production
+
 
 COPY package*.json ./
 COPY tailwind.config.js ./
 COPY postcss.config.js ./
 # reproducible install without devDeps&#8203;:contentReference[oaicite:5]{index=5}
-RUN npm ci --omit=dev
+RUN npm ci
 COPY . .
 # creates .next/ bundle
 RUN npm run build
