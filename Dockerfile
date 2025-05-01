@@ -15,6 +15,8 @@ WORKDIR /app
 # Copy the rest of the application code
 COPY . .
 
+ENV NODE_ENV=production
+
 # Expose the port
 EXPOSE 3000
 # build the application
