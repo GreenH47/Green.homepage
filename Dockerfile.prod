@@ -6,7 +6,9 @@ FROM --platform=linux/arm64 node:20-alpine AS builder
 WORKDIR /app
 ENV NODE_ENV=production
 
-COPY package*.json .
+COPY package*.json ./
+COPY tailwind.config.js ./
+COPY postcss.config.js ./
 # reproducible install without devDeps&#8203;:contentReference[oaicite:5]{index=5}
 RUN npm ci --omit=dev
 COPY . .
@@ -28,4 +30,4 @@ COPY --from=builder /app/node_modules ./node_modules
 # 👉 If you enable `output: "standalone"` in next.config.js you can skip node_modules for an even slimmer image.&#8203;:contentReference[oaicite:6]{index=6}
 
 EXPOSE 3000
-CMD ["node_modules/.bin/next", "start"]
+CMD ["npm", "run", "start"]
