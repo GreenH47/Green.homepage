@@ -2,21 +2,24 @@
 
 ########## 1️⃣  Build stage ##########
 ARG BUILDPLATFORM
-FROM --platform=$BUILDPLATFORM node:20-alpine AS builder   # multi-arch base image
+FROM --platform=$BUILDPLATFORM node:20-alpine AS builder
 WORKDIR /app
 ENV NODE_ENV=production
 
-COPY package*.json ./
-RUN npm ci --omit=dev      # reproducible install without devDeps&#8203;:contentReference[oaicite:5]{index=5}
+COPY package*.json .
+# reproducible install without devDeps&#8203;:contentReference[oaicite:5]{index=5}
+RUN npm ci --omit=dev
 COPY . .
-RUN npm run build          # creates .next/ bundle
+# creates .next/ bundle
+RUN npm run build
 
 ########## 2️⃣  Runtime stage ##########
 ARG TARGETPLATFORM
 FROM --platform=$TARGETPLATFORM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
-ENV NEXT_TELEMETRY_DISABLED=1       # silence analytics
+# silence analytics
+ENV NEXT_TELEMETRY_DISABLED=1
 
 COPY --from=builder /app/.next      ./.next
 COPY --from=builder /app/public     ./public
