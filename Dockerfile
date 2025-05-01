@@ -4,7 +4,7 @@ FROM greenh47/homepage:nextjs_base
 # Set the working directory
 WORKDIR /app
 
-
+ENV PATH=/app/node_modules/.bin:$PATH
 
 # Copy the rest of the application code
 COPY . .
@@ -16,6 +16,8 @@ ENV NODE_ENV=production
 # Expose the port
 EXPOSE 3000
 
+RUN next build
 
 # Start the application
-CMD ["sh","-c","next build && npm run start"]
+CMD ["npm","run","start"]
+
