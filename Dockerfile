@@ -4,7 +4,7 @@ FROM greenh47/homepage:nextjs_base
 # Set the working directory
 WORKDIR /app
 
-
+ENV NODE_ENV=production
 
 ## Copy just the package.json and package-lock.json files
 #COPY package*.json ./
