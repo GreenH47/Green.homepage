@@ -31,11 +31,11 @@ jobs:
         uses: docker/build-push-action@v5    # single step does it all :contentReference[oaicite:4]{index=4}
         with:
           context: .
-          file: Dockerfile.prod
-          #file: Dockerfile
+          #file: Dockerfile.prod
+          file: Dockerfile
           platforms: linux/arm64            # your target architecture
           push: true
-          tags: greenh47/homepage
+          tags: greenh47/homepage:nextjs
 
       - name: Update docker image
         id: update-ec2
