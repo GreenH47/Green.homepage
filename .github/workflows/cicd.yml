@@ -31,25 +31,25 @@ jobs:
         uses: docker/build-push-action@v5    # single step does it all :contentReference[oaicite:4]{index=4}
         with:
           context: .
-          file: Dockerfile.prod
-          # file: Dockerfile
+          # file: Dockerfile.prod
+          file: Dockerfile
           platforms: linux/arm64            # your target architecture
           push: true
-          tags: greenh47/homepage:_test
+          tags: greenh47/homepage
 
-#      - name: Update docker image
-#        id: update-ec2
-#        uses: appleboy/ssh-action@master
-#        with:
-#          host: ${{ secrets.HOST_IP }}
-#          username: ubuntu
-#          key: ${{ secrets.SSH_PRIVATE_KEY }}
-#          script: |
-#            # stop docker compose
-#            sudo docker compose stop home_page
-#
-#            # pull the latest image
-#            sudo docker compose pull home_page
-#
-#            # start the docker compose
-#            sudo docker compose up -d home_page
+      - name: Update docker image
+        id: update-ec2
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST_IP }}
+          username: ubuntu
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # stop docker compose
+            sudo docker compose stop home_page
+
+            # pull the latest image
+            sudo docker compose pull home_page
+
+            # start the docker compose
+            sudo docker compose up -d home_page
