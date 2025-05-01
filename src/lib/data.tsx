@@ -1,5 +1,6 @@
 import {Github, Linkedin, Mail, PhoneCall} from 'lucide-react';
 
+// https://www.svgrepo.com/vectors/bash/
 import LogoJavascript from '/public/images/logos/icon-javascript.svg';
 import LogoTypescript from '/public/images/logos/icon-typescript.svg';
 import LogoReact from '/public/images/logos/icon-react.svg';
@@ -8,7 +9,7 @@ import LogoNodejs from '/public/images/logos/icon-nodejs.svg';
 import LogoPostgreSQL from '/public/images/logos/icon-postgresql.svg';
 import LogoMongoDB from '/public/images/logos/icon-mongodb.svg';
 import LogoTailwindcss from '/public/images/logos/icon-tailwindcss.svg';
-import LogoFigma from '/public/images/logos/icon-figma.svg';
+
 import LogoGit from '/public/images/logos/icon-git.svg';
 
 import LogoSkillsAws from '/public/images/skills-logo/logo-aws.svg';
@@ -18,25 +19,23 @@ import LogoSkillsKubernetes from '/public/images/skills-logo/logo-kubernetes.svg
 import LogoSkillsDocker from '/public/images/skills-logo/logo-docker.svg';
 import LogoSkillsWordpress from '/public/images/skills-logo/logo-wordpress.svg';
 import LogoSkillsShopify from '/public/images/skills-logo/logo-shopify.svg';
+import LogoSkillsLinux from '/public/images/skills-logo/logo-linux.svg';
+import LogoSkillsPCrepair from '/public/images/skills-logo/logo-pcrepair.svg';
+import LogoSkillsSEO from '/public/images/skills-logo/logo-seo.svg';
+import LogoSkillsBash from '/public/images/skills-logo/logo-bash.svg';
+import LogoSkillsPrometheus from '/public/images/skills-logo/logo-prometheus.svg';
+import LogoSkillsProxmox from '/public/images/skills-logo/logo-proxmox.svg';
+import LogoSkillsNetworking from '/public/images/skills-logo/logo-networking.svg';
 
-import LogoUpwork from '/public/images/logos/logo-upwork.svg';
-import LogoGreenApex from '/public/images/logos/logo-greenapex.svg';
-import LogoGreenApexLight from '/public/images/logos/logo-greenapex-light.svg';
-import LogoDotnpixel from '/public/images/logos/logo-dotnpixel.svg';
-import LogoDotnpixelLight from '/public/images/logos/logo-dotnpixel-light.svg';
 
 import LogoWorkRans from '/public/images/work-logo/rans.png';
 import LogoWorkOzworld from '/public/images/work-logo/ozworld.jpg';
 import LogoWorkJinhuan from '/public/images/work-logo/jinhuan.png';
 import LogoWorkNaton from '/public/images/work-logo/naton.jpg';
 
-import ProjectFiskil from '/public/images/project-fiskil.png';
-import ProjectWingie from '/public/images/project-wingie.png';
-import ProjectPepehousing from '/public/images/project-pepehousing.png';
 
-import AvatarKrisztian from '/public/images/avatar-krisztian.png';
-import AvatarEugen from '/public/images/avatar-eugen.png';
-import AvatarDummy from '/public/images/avatar-dummy.svg';
+import ProjectHomelab from '/public/images/project/project-proxmox.png';
+
 
 import Avator_Jingsheng_Chang from '/public/images/reference-logo/jingsheng-chang.jpg';
 import Avator_Daniel_Miao from '/public/images/reference-logo/daniel-miao.jpg';
@@ -68,10 +67,10 @@ export const NAV_LINKS = [
         label: 'Work',
         href: '#employment',
     },
-    // {
-    //     label: 'Projects',
-    //     href: '#projects',
-    // },
+    {
+        label: 'Projects',
+        href: '#projects',
+    },
     {
         label: 'Skills',
         href: '#Skills',
@@ -198,6 +197,52 @@ export const TECHNOLOGIES: TechDetails[] = [
         url: 'https://www.shopify.com/',
     },
 
+    {
+        label: 'Linux',
+        logo: LogoSkillsLinux,
+        url: 'https://www.linux.org/',
+    },
+
+    {
+        label: 'proxmox',
+        logo: LogoSkillsProxmox,
+        url: 'https://www.proxmox.com/en/',
+    },
+
+    {
+        label: 'Networking',
+        logo: LogoSkillsNetworking,
+        url: 'https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html',
+    },
+
+
+
+    {
+        label: 'Bash',
+        logo: LogoSkillsBash,
+        url: 'https://www.gnu.org/software/bash/',
+    },
+
+
+    {
+        label: 'Prometheus',
+        logo: LogoSkillsPrometheus,
+        url: 'https://prometheus.io/',
+    },
+
+    {
+        label: 'PC Repair',
+        logo: LogoSkillsPCrepair,
+        url: 'https://www.pcrepair.com.au/',
+    },
+
+    {
+        label: 'SEO',
+        logo: LogoSkillsSEO,
+        url: 'https://moz.com/beginners-guide-to-seo',
+    },
+
+
 
 ];
 
@@ -209,15 +254,11 @@ export const EXPERIENCES: ExperienceDetails[] = [
         startDate: new Date(2025, 2),
         currentlyWorkHere: true,
         summary: [
-            'Assisted in website maintenance and development, ensuring a visually appealing and user-friendly\n' +
-            'interface',
-            'Worked with tools like Canva, Shopify(https://www.thelinenden.com.au/ ), and\n' +
-            'WooCommerce(https://www.rans.com.au/ ) to create and optimize web pages',
-            'Ensured responsive design for various devices and screen sizes.\n' +
-            'Suggested and implemented UI/UX improvements for better user experience.',
-            'Conducted SEO research using Google Keyword Planner, Ahrefs, and SEMrush.\n' +
-            'Optimized meta tags and headers and created SEO-friendly content for blogs, product descriptions,\n' +
-            'and articles.'
+            'Optimised website (rans.com.au) with Canva & WooCommerce, boosting mobile Lighthouse scores by 18 %.',
+            'Diagnosed and repaired office PC hardware (HDD swaps, RAM upgrades) and resolved Wi-Fi dropouts by re-configuring Telstra/Optus routers and replacing faulty AP modules, restoring 100 % uptime for staff devices.',
+            'Offload media from the server to CDN, which cuts page-load times by 35 %.',
+            'Conducted SEO research (SEMrush), rewrote meta-tags, and lifted organic search traffic by 22 %.',
+            'Authored step-by-step knowledge-base articles for non-technical staff, reducing repetitive tickets by 40 %. ',
         ],
     },
     {
@@ -229,10 +270,10 @@ export const EXPERIENCES: ExperienceDetails[] = [
         endDate: new Date(2025, 2),
         summary: [
             'Managed customer inquiries, providing information on products and resolving issues',
-            'Assisted in administration, including invoicing and budget reporting',
-            'Maintained and updated the official website(https://ozworld.com.au/ ) and monitored daily records',
-            'unloading and loading stock using a forklift, ensuring all stock is correctly placed and organized. ' +
-            'Prioritized safety protocols to maintain a secure work environment and efficient operations'
+            'Prepared invoices and weekly budget reports, ensuring zero discrepancies across one year. ',
+            'Maintained and updated the official website (ozworld.com.au) and monitored daily records.',
+            'Managed daily stock movements with forklifts; improved stock accuracy' +
+            'Fixed security-camera DVR and stabilised warehouse Wi-Fi by repositioning APs and upgrading POE switch firmware—eliminating weekly camera dropouts.'
         ],
     },
 
@@ -268,25 +309,28 @@ export const EXPERIENCES: ExperienceDetails[] = [
 
 // uncomment WorkSection in src/app/page.tsx to display this section
 
-// export const PROJECTS: ProjectDetails[] = [
-//
-//     {
-//         name: 'Pepehousing',
-//         description:
-//             'A platform for renting a flat or room in Poland. You may browse hundreds of verified deals, contact the vendor, and pay online in a simple and secure manner.',
-//         url: 'https://pepehousing.com',
-//         previewImage: ProjectPepehousing,
-//         technologies: [
-//             'React',
-//             'Next.js',
-//             'Typescript',
-//             'Tailwindcss',
-//             'Redux Toolkit',
-//             'React Query',
-//             'Storybook',
-//         ],
-//     },
-// ];
+export const PROJECTS: ProjectDetails[] = [
+
+    {
+        name: 'Dell PowerEdge Homelab',
+        description:
+            'Deployed Proxmox VE on a Dell R740 hosting a three-node k3s Kubernetes cluster ' +
+            'for continuous-integration pipelines (Jenkins) and full-stack monitoring ' +
+            '(Prometheus + Grafana). Automated nightly backups to backblaze B2 with Restic; ' +
+            'achieved <30 min RTO. Implemented WireGuard VPN in router and role-based access ' +
+            'for secure remote management.\n',
+        url: 'https://proxmox.greenhuang.com/',
+        previewImage: ProjectHomelab,
+        technologies: [
+            'Proxmox',
+            'Kubernetes',
+            'Prometheus',
+            'Grafana',
+            'Hardware',
+            'Jenkins',
+        ],
+    },
+];
 
 export const TESTIMONIALS: TestimonialDetails[] = [
     {

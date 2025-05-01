@@ -29,7 +29,7 @@
 $ git clone https://github.com/GreenH47/Green.homepage.git
 $ cd Green.homepage
 $ npm install
-$ npm run dev
+$ npm run build
 ```
 ## Figma
 
@@ -56,7 +56,9 @@ $ docker tag green.homepage greenh47/homepage:nextjs
 $ docker push greenh47/homepage:nextjs
 
 //or
-$ docker build --platform linux/arm64 -t green.homepage . ; docker tag green.homepage greenh47/homepage:nextjs ; docker push greenh47/homepage:nextjs
+$ docker build --platform linux/arm64 -t green.homepage .
+$ docker tag green.homepage greenh47/homepage:nextjs
+$ docker push greenh47/homepage:nextjs
 
 ````
 
