@@ -1,32 +1,28 @@
-# ----------  Build stage ----------
-FROM node:20-alpine AS builder
+# syntax=docker/dockerfile:1.4   # enables BuildKit ‘ARG --platform’ features
 
-# 1. Set workdir and turn on corepack (enables pnpm/yarn if you need them)
+########## 1️⃣  Build stage ##########
+ARG BUILDPLATFORM
+FROM --platform=$BUILDPLATFORM node:20-alpine AS builder   # multi-arch base image
 WORKDIR /app
 ENV NODE_ENV=production
 
-# 2. Install dependencies separately for better cache usage
 COPY package*.json ./
-RUN npm ci --omit=dev          # reproducible installs & no devDeps :contentReference[oaicite:5]{index=5}
-
-# 3. Copy the source and build
+RUN npm ci --omit=dev      # reproducible install without devDeps&#8203;:contentReference[oaicite:5]{index=5}
 COPY . .
-RUN npm run build              # generates .next/ bundle :contentReference[oaicite:6]{index=6}
+RUN npm run build          # creates .next/ bundle
 
-# ----------  Runtime stage ----------
-FROM node:20-alpine AS runner
+########## 2️⃣  Runtime stage ##########
+ARG TARGETPLATFORM
+FROM --platform=$TARGETPLATFORM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1       # silence analytics
 
-# 4. Bring over only what the server needs
-COPY --from=builder /app/.next              ./.next
-COPY --from=builder /app/public             ./public
-COPY --from=builder /app/package.json       ./package.json
-COPY --from=builder /app/node_modules       ./node_modules
-
-# 5. Optional: use Next.js “standalone” output to copy even less
-# (needs `output: 'standalone'` in next.config.js) :contentReference[oaicite:7]{index=7}
+COPY --from=builder /app/.next      ./.next
+COPY --from=builder /app/public     ./public
+COPY --from=builder /app/package.json ./package.json
+COPY --from=builder /app/node_modules ./node_modules
+# 👉 If you enable `output: "standalone"` in next.config.js you can skip node_modules for an even slimmer image.&#8203;:contentReference[oaicite:6]{index=6}
 
 EXPOSE 3000
-#HEALTHCHECK CMD curl -f http://localhost:3000/ || exit 1
 CMD ["node_modules/.bin/next", "start"]
