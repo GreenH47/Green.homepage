@@ -188,7 +188,7 @@ export const TECHNOLOGIES: TechDetails[] = [
     {
         label: 'Wordpress',
         logo: LogoSkillsWordpress,
-        url: 'https://wordpress.com/',
+        url: 'https://wordpress.org/',
     },
 
     {
@@ -212,7 +212,7 @@ export const TECHNOLOGIES: TechDetails[] = [
     {
         label: 'Networking',
         logo: LogoSkillsNetworking,
-        url: 'https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html',
+        url: 'https://learn.microsoft.com/en-us/training/modules/network-fundamentals/',
     },
 
 
@@ -233,13 +233,13 @@ export const TECHNOLOGIES: TechDetails[] = [
     {
         label: 'PC Repair',
         logo: LogoSkillsPCrepair,
-        url: 'https://www.pcrepair.com.au/',
+        url: 'https://www.seek.com.au/career-advice/role/computer-technician',
     },
 
     {
         label: 'SEO',
         logo: LogoSkillsSEO,
-        url: 'https://moz.com/beginners-guide-to-seo',
+        url: 'https://developers.google.com/search/docs/fundamentals/seo-starter-guide',
     },
 
 

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { MapPin } from 'lucide-react';
 
-import GreenHeadshot from '/public/images/green-avator.jpg';
+import GreenFullPose from '/public/images/green-full-pose.jpg';
 import SocialIcons from '@/components/data-display/social-icons';
 import Typography from '@/components/general/typography';
 import Container from '@/components/layout/container';
@@ -14,7 +14,7 @@ const HeroSection = () => {
         <div className="flex items-center justify-center md:order-last md:flex-grow md:justify-end">
           <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
             <Image
-              src={GreenHeadshot}
+              src={GreenFullPose}
               alt="Headshot of Sagar"
               className="absolute z-10 h-[280px] w-[240px] border-8 border-gray max-md:left-5 md:left-0 md:top-0 md:h-[320px] md:w-[280px]"
               style={{ objectFit: 'cover' }}
@@ -31,12 +31,14 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-              Motivated Cloud and Web Engineer with a Master’s degree in Information Technology from Monash University
-              and an AWS Solutions Architect Associate certification. I offer strong programming skills in C#, Java, Python,
-              and SQL combined with hands-on experience in cloud computing and web development. During my internship at RANS Australia,
-              I enhanced website UI/UX, optimized SEO, and ensured responsive designs using tools like Canva, Shopify, and WooCommerce.
-              I excel in troubleshooting and streamlining digital experiences and am eager to contribute my diverse skill
-              set in a collaborative technical role.
+              Motivated Cloud and Web Engineer with a Master’s in Information Technology
+              from Monash University, Certified Kubernetes Administrator and
+              AWS Solutions Architect – Associate. Skilled in C#, Java, Python, and SQL,
+              with hands-on experience across cloud deployments, web development, and
+              hardware / Wi-Fi troubleshooting. In recent roles I have enhanced UI/UX,
+              optimised SEO, and resolved onsite network issues while maintaining high data integrity.
+              I bring a strong problem-solving mindset and a passion for continuous improvement to
+              collaborative technical teams.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">
