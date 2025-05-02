@@ -30,6 +30,7 @@ $ git clone https://github.com/GreenH47/Green.homepage.git
 $ cd Green.homepage
 $ npm install
 $ npm run build
+$ npm run dev
 ```
 ## Figma
 

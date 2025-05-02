@@ -20,7 +20,9 @@ import LogoSkillsDocker from '/public/images/skills-logo/logo-docker.svg';
 import LogoSkillsWordpress from '/public/images/skills-logo/logo-wordpress.svg';
 import LogoSkillsShopify from '/public/images/skills-logo/logo-shopify.svg';
 import LogoSkillsLinux from '/public/images/skills-logo/logo-linux.svg';
-import LogoSkillsPCrepair from '/public/images/skills-logo/logo-pcrepair.svg';
+//import LogoSkillsPCrepair from '/public/images/skills-logo/logo-pcrepair.svg';
+import LogoSkillsPCrepair from '/public/images/skills-logo/logo-pc-repair.png'
+
 import LogoSkillsSEO from '/public/images/skills-logo/logo-seo.svg';
 import LogoSkillsBash from '/public/images/skills-logo/logo-bash.svg';
 import LogoSkillsPrometheus from '/public/images/skills-logo/logo-prometheus.svg';
@@ -251,7 +253,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
         logo: LogoWorkRans,
         logoAlt: 'Rans logo',
         position: 'RANS Australia - Website Development and Maintenance Intern',
-        startDate: new Date(2025, 2),
+        startDate: new Date(2025, 1),
         currentlyWorkHere: true,
         summary: [
             'Optimised website (rans.com.au) with Canva & WooCommerce, boosting mobile Lighthouse scores by 18 %.',
@@ -266,8 +268,8 @@ export const EXPERIENCES: ExperienceDetails[] = [
 
         logoAlt: 'Ozworld logo',
         position: 'Ozworld Timber Flooring - Warehouse Assistant',
-        startDate: new Date(2024, 4),
-        endDate: new Date(2025, 2),
+        startDate: new Date(2024, 3),
+        endDate: new Date(2025, 1),
         summary: [
             'Managed customer inquiries, providing information on products and resolving issues',
             'Prepared invoices and weekly budget reports, ensuring zero discrepancies across one year. ',
@@ -282,8 +284,8 @@ export const EXPERIENCES: ExperienceDetails[] = [
 
         logoAlt: 'Jinhuan logo',
         position: 'Jinhuan Construction Group - Executive Assistant to the Manager',
-        startDate: new Date(2021, 10),
-        endDate: new Date(2021, 3),
+        startDate: new Date(2021, 3),
+        endDate: new Date(2021, 10),
         summary: [
             'Created presentations, reports, and meeting minutes for the department.',
             'Distributed communications regarding important announcements and events.',
@@ -296,7 +298,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
 
         logoAlt: 'Naton logo',
         position: 'Beijing Naton Technology Group - Test Engineer of Biomechanics',
-        startDate: new Date(2020, 9),
+        startDate: new Date(2020, 8),
         endDate: new Date(2021, 1),
         summary: [
             'Reviewed specifications with the design team and conducted thorough testing',
